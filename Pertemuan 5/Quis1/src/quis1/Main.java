@@ -11,36 +11,40 @@ package quis1;
 public class Main {
 
     public static void main(String[] args) {
-        Manusia m = new Manusia();
-        Pria p = new Pria();
-        Wanita w = new Wanita();
         
+        Pria p1 = new Pria();
+        Pria p2 = new Pria();
+        Wanita w1 = new Wanita();
+        Wanita w2 = new Wanita();
+        Wanita w3 = new Wanita();
         System.out.println("======================================");
         System.out.println("         Umur diatas 22 tahun         ");
         System.out.println("======================================");
-        Pria p1 = new Pria();
         p1.setNama("Lucas");
-        p1.setUmur(27);
-        p1.infoPria();
-        Wanita w1 = new Wanita();
-        w1.setNama("Alexa");
-        w1.setUmur(24);
-        w1.infoWanita();
-        Manusia m1 = new Manusia();
-        m1.setNama("Sean");
-        m1.setUmur(4);
-        m1.info();
+        p1.setUmur(30);
+        p1.setNamaIstri(w1);
+        
+        w1.setNama("Lulu");
+        w1.setUmur(25);
+        w1.setNamaSuami(p1);
+        w1.setNamaAnak(p1);
+        
+        w2.setNama("Sean");
+        w2.setUmur(17);
+        
+        p1.info();
+        w1.info();
+        w2.info();
+        
         System.out.println();
         System.out.println("======================================");
         System.out.println("       Umur di bawah 22 tahun         ");
         System.out.println("======================================");
-        Pria p2 = new Pria();
         p2.setNama("Alvaro");
         p2.setUmur(19);
-        p2.infoPria();
-        Wanita w2 = new Wanita();
-        w2.setNama("Steffi");
-        w2.setUmur(15);
-        w2.infoWanita();
+        p2.info();
+        w3.setNama("Steffi");
+        w3.setUmur(15);
+        w3.info();
     }
 }

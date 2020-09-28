@@ -11,35 +11,53 @@ package quis1;
  */
 public class Wanita extends Manusia {
 
-    private Pria suami;
-    private Manusia anak;
+    private Pria namaSuami;
+    private Manusia namaAnak;
 
     public Wanita() {
 
     }
-    public Wanita(int umur, String nama, boolean dewasa, Pria suami, Manusia anak){
-        this.umur = umur;
-        this.nama = nama;
-        this.dewasa = dewasa;
-        this.suami = suami;
-        this.anak = anak;
+
+    public Wanita(Pria namaSuami, Manusia namaAnak, int umur, String nama, boolean dewasa) {
+        super(umur, nama, dewasa);
+        this.namaSuami = namaSuami;
+        this.namaAnak = namaAnak;
     }
-    
-    public void tambahAturan(){
-        if (umur >= 22){
+
+    public Pria getNamaSuami() {
+        return namaSuami;
+    }
+
+    public Manusia getNamaAnak() {
+        return namaAnak;
+    }
+
+    public void setNamaSuami(Pria namaSuami) {
+        this.namaSuami = namaSuami;
+    }
+
+    public void setNamaAnak(Manusia namaAnak) {
+        this.namaAnak = namaAnak;
+    }
+
+    public void aturanUmur() {
+        if (umur >= 20) {
             setDewasa(true);
-            System.out.println("Telah menikah");
-            System.out.println("-----Suami-----");
-            
-            System.out.println("-----Anak------");
-        } else{
+            System.out.println("Dewasa : " + isDewasa());
+            System.out.println("Dewasa dan memiliki Suami dan Anak");
+            System.out.println("Nama Suami : " + namaSuami.getNama());
+            System.out.println("Nama Anak : " + namaAnak.getNama());
+        } else {
+            setDewasa(false);
+            System.out.println("Dewasa : " + isDewasa());
             System.out.println("Wanita ini masih kuliah");
         }
     }
-    
-    public void infoWanita(){
-        System.out.println("-----INFORMASI WANITA------");
+
+    @Override
+    public void info() {
         super.info();
-        tambahAturan();
+        aturanUmur();
+        System.out.println("============================");
     }
 }

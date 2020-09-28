@@ -36,7 +36,6 @@ public class Main {
         w1.info();
         w2.info();
         
-        System.out.println();
         System.out.println("======================================");
         System.out.println("       Umur di bawah 22 tahun         ");
         System.out.println("======================================");

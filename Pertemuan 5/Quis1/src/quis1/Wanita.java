@@ -43,13 +43,11 @@ public class Wanita extends Manusia {
     public void aturanUmur() {
         if (umur >= 20) {
             setDewasa(true);
-            System.out.println("Dewasa : " + isDewasa());
-            System.out.println("Dewasa dan memiliki Suami dan Anak");
+            System.out.println("Dewasa dan telah memiliki Suami dan Anak");
             System.out.println("Nama Suami : " + namaSuami.getNama());
             System.out.println("Nama Anak : " + namaAnak.getNama());
         } else {
             setDewasa(false);
-            System.out.println("Dewasa : " + isDewasa());
             System.out.println("Wanita ini masih kuliah");
         }
     }
@@ -58,6 +56,6 @@ public class Wanita extends Manusia {
     public void info() {
         super.info();
         aturanUmur();
-        System.out.println("============================");
+        System.out.println("--------------------------------------");
     }
 }

@@ -33,12 +33,10 @@ public class Pria extends Manusia {
     public void aturanUmur() {
         if (umur >= 22) {
             setDewasa(true);
-            System.out.println("Dewasa : " + isDewasa());
-            System.out.println("Dewasa dan memiliki istri");
+            System.out.println("Dewasa dan telah memiliki istri");
             System.out.println("Nama Istri : " + namaIstri.getNama());
         } else {
             setDewasa(false);
-            System.out.println("Dewasa : " + isDewasa());
             System.out.println("Pria ini masih kuliah");
         }
     }
@@ -47,7 +45,7 @@ public class Pria extends Manusia {
     public void info() {
         super.info();
         aturanUmur();
-        System.out.println("============================");
+        System.out.println("--------------------------------------");
     }
 
 }

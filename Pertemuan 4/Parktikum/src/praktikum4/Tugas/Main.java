@@ -12,13 +12,13 @@ package praktikum4.Tugas;
 public class Main {
     public static void main(String[] args) {
         Penumpang p = new Penumpang("12345678", "Septian Alvaro");
-        Pesawat pesawat = new Pesawat("US123", 10);
-        pesawat.setPenumpang(p, 1);
-        System.out.println(pesawat.info());
+        Kereta kereta = new Kereta("Gerbong 1", 10);
+        kereta.setPenumpang(p, 1);
+        System.out.println(kereta.info());
         
-        Petugas pilot = new Petugas("23456789", "Galaksi Aldebaran");
-        Petugas coPilot = new Petugas("23456788", "Bams Apriliano");
-        Pesawat p1 = new Pesawat("Garuda Indonesia", "First Class", pilot, coPilot);
+        Petugas masinis = new Petugas("23456789", "Galaksi Aldebaran");
+        Petugas coMasinis = new Petugas("23456788", "Bams Apriliano");
+        Kereta p1 = new Kereta("Jenggala", "Ekonomi", masinis, coMasinis);
         System.out.println(p1.info1());
     } 
 }

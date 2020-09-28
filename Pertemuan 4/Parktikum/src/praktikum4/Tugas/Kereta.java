@@ -9,25 +9,25 @@ package praktikum4.Tugas;
  *
  * @author Asus
  */
-public class Pesawat {
+public class Kereta {
     private String nama;
     private String kelas;
     private String kode;
     private Kursi[] arrayKursi;
-    private Petugas pilot;
-    private Petugas coPilot;
+    private Petugas masinis;
+    private Petugas coMasinis;
     
-    Pesawat(String nama, String kelas, Petugas pilot) {
+    Kereta (String nama, String kelas, Petugas masinis) {
         this.nama = nama;
         this.kelas = kelas;
-        this.pilot = pilot;
+        this.masinis = masinis;
     }
     
-    Pesawat(String nama, String kelas, Petugas pilot, Petugas coPilot) {
+    Kereta (String nama, String kelas, Petugas masinis, Petugas coMasinis) {
         this.nama = nama;
         this.kelas = kelas;
-        this.pilot = pilot;
-        this.coPilot = coPilot;
+        this.masinis = masinis;
+        this.coMasinis = coMasinis;
     }
     
      public void setNama(String nama) {
@@ -52,7 +52,7 @@ public class Pesawat {
         }
     }
     
-    Pesawat(String kode, int jumlah) {
+    Kereta (String kode, int jumlah) {
         this.kode = kode;
         this.arrayKursi = new Kursi[jumlah];
         this.initKursi();
@@ -72,8 +72,8 @@ public class Pesawat {
         info += "-------INFORMASI PESAWAT -------------\n";
         info += "Nama : " + this.nama + "\n";
         info += "Kelas : " + this.kelas + "\n";
-        info += "Pilot : " + this.pilot.info() + "\n";
-        info += "Co-Pilot : " + this.coPilot.info() + "\n";
+        info += "Masinis : " + this.masinis.info() + "\n";
+        info += "Co-Masinis : " + this.coMasinis.info() + "\n";
         return info;
     }
     

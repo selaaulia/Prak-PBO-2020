@@ -10,38 +10,59 @@ package Tugas4;
  * @author Asus
  */
 public class Anggota {
-    private String noKTP;
+    private String ktp;
     private String nama;
-    private float limit;
-    private float pinjam;
-    private float angsuran;
-    
-    Anggota(String noKTP, String nama){
-        this.noKTP = noKTP;
+    private int limitPinjam;
+    private int pinjam;
+
+    Anggota(String ktp, String nama, int limitPinjam) {
+        this.ktp = ktp;
         this.nama = nama;
-        this.limit = 0;
+        this.limitPinjam = limitPinjam;
     }
-    
-    public void setNama(String nama){
+
+    public void setKTP(String ktp) {
+        this.ktp = ktp;
+    }
+
+    public void setNama(String nama) {
         this.nama = nama;
     }
-    public void setNoKTP(String noKTP){
-        this.noKTP = noKTP;
-    }   
-    public String getNoKTP(){
-        return noKTP;
+
+    public void setLimitPinjam(int limitPinjam) {
+        this.limitPinjam = limitPinjam;
     }
-    public String getNama(){
+
+    public String getKTP() {
+        return ktp;
+    }
+
+    public String getNama() {
         return nama;
     }
-    public float getLimitPinjaman(){
-        return limit;
+
+    public int getLimitPinjaman() {
+        return limitPinjam;
     }
-    public float getJumlahPinjaman(){
+
+    public void pinjam(int pinjam) {
+        this.pinjam = pinjam;
+    }
+
+    public void angsur(int angsur) {
+        if(angsur >= 0.1 * pinjam){
+            pinjam -= angsur;
+        }
+        else{
+            System.out.println("Maaf,angsuran harus 10% dari jumlah pinjaman");
+        }
+    }
+
+    public int getJumlahPinjaman() {
+        if (pinjam > limitPinjam) {
+            System.out.println("Maaf, jumlah pinjaman melebihi limit");
+        }
         return pinjam;
-    }
-    public float getAngsuran(){
-        return angsuran;
     }
     
 }

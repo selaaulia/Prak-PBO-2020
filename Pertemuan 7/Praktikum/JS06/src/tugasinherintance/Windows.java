@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -24,3 +25,31 @@ public class Windows extends Laptop{
         System.out.println("Fitur " + fitur);
     }  
 }
+=======
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tugasinherintance;
+
+/**
+ *
+ * @author Asus
+ */
+public class Windows extends Laptop{
+    public String fitur;
+
+    public Windows() {
+    }
+
+    public Windows(String merk, int kecProsesor, int sizeMemory, String jnsProsesor, String jnsBatrei, String fitur) {
+        super(merk, kecProsesor, sizeMemory, jnsProsesor, jnsBatrei);
+        this.fitur = fitur;
+    }
+    public void tampilWindows(){
+        super.tampilLaptop();
+        System.out.println("Fitur " + fitur);
+    }  
+}
+>>>>>>> 5443b57432ce8c383dc054fe4d280e29ed4df1b2
